@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.wifi.ui.login.LoginActivity;
+import com.example.wifi.ui.login.NavigationActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,10 +23,5 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(intent);
     }
-    /** 跳转到用户设置界面 */
-    public void jumpToUserSet(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
 
-        startActivity(intent);
-    }
 }

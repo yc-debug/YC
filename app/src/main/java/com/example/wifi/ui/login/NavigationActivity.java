@@ -7,10 +7,12 @@ import android.view.Menu;
 import android.widget.TextView;
 
 import com.example.wifi.R;
+import com.example.wifi.UserSettingsActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -22,7 +24,7 @@ import androidx.appcompat.widget.Toolbar;
 public class NavigationActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    TextView nameText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +56,7 @@ public class NavigationActivity extends AppCompatActivity {
         String name = intent.getStringExtra(LoginActivity.EXTRA_MESSAGE);
         String mail = name+"@bjtu.edu.cn";
         View headerView = navigationView.getHeaderView(0);
-        TextView nameText = headerView.findViewById(R.id.nameText);
+        nameText = headerView.findViewById(R.id.nameText);
         TextView mailText = headerView.findViewById(R.id.textView);
         nameText.setText(name);
         mailText.setText(mail);
@@ -72,5 +74,26 @@ public class NavigationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    /** 跳转到用户设置界面 */
+    public void jumpToUserSet(View view) {
+        Intent intent = new Intent(this, UserSettingsActivity.class);
+        intent.putExtra("extra_data",R.id.username);
+        startActivityForResult(intent,1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode){
+            case 1:
+                if(requestCode==RESULT_OK){
+                    String name = data.getStringExtra("data_return");
+                    nameText.setText(name);
+                }
+                break;
+            default:
+        }
     }
 }
