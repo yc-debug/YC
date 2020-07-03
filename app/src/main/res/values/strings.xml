@@ -24,9 +24,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Map</string>
-    <string name="menu_gallery">Friends</string>
-    <string name="menu_slideshow">Pokemon</string>
+    <string name="menu_home">游戏</string>
+    <string name="menu_gallery">您的精灵</string>
+    <string name="menu_slideshow">您的好友</string>
+    <string name="battle">战斗</string>
     <string name="title_activity_user_settings">UserSettingsActivity</string>
 
     <!-- Preference Titles -->

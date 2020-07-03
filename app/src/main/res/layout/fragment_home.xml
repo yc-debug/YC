@@ -9,7 +9,13 @@
     <LinearLayout
         android:layout_width="410dp"
         android:layout_height="730dp"
-        android:orientation="vertical">
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="#8BC34A"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView3"
