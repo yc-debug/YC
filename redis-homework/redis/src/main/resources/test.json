@@ -1,0 +1,29 @@
+{
+  "user1": {
+    "Num": 1,
+    "description": "yc",
+    "Action" : "click",
+    "time": "202011251030 202001010000"
+  },
+
+  "user2": {
+    "Num": 2,
+    "description": "zzy",
+    "Action" : "click",
+    "time": "202011251101 202001010000"
+  },
+
+  "user3": {
+    "Num": 4,
+    "description": "zkh",
+    "Action" : "click",
+    "time": "202011251031 202001010000"
+  },
+
+  "user4": {
+    "Num": 4,
+    "description": "wy",
+    "Action" : "click",
+    "time": "202011251031 202001010000"
+  }
+}
