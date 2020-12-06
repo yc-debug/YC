@@ -1,3 +1,3 @@
 # YC
 homework
-This is my homework of NoSql
+This is my homeworks of NoSql
