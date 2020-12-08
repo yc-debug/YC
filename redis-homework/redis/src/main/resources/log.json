@@ -1,0 +1,36 @@
+
+{
+  "yc": {
+    "Num": 1,
+    "description": "yc",
+    "Action" : "click",
+    "time": "202011251030 202001010000"
+  },
+
+  "zzy": {
+    "Num": 2,
+    "description": "zzy",
+    "Action" : "click",
+    "time": "202011251101 202001010000"
+  },
+
+  "zkh": {
+    "Num": 3,
+    "description": "zkh",
+    "Action" : "click",
+    "time": "202011251031 202001010000"
+  },
+
+  "wy": {
+    "Num": 4,
+    "description": "wy",
+    "Action" : "click",
+    "time": "202011251031 202001010000"
+  },
+  "wyb": {
+    "Num": 5,
+    "description": "wyb",
+    "Action" : "click",
+    "time": "202012042128 202001010000"
+  }
+}
