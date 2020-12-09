@@ -9,7 +9,7 @@ public class main {
 
     public static void main(String args[]) throws Exception {
         //获取json文件
-        JsonReading reader = new JsonReading(JsonReading.class.getClassLoader().getResource("test.json").getPath());
+        JsonReading reader = new JsonReading(JsonReading.class.getClassLoader().getResource("SD.json").getPath());
         redisencap getjson = new redisencap();
 
         getjson.loading();
@@ -28,17 +28,9 @@ public class main {
 
         //incr测试
         System.out.println("当前系统点击数:" + getjson.getInt());
-        getjson.increase("NUM",10);
+        getjson.increase("NUM",5);
         System.out.println("当前系统点击数:" + getjson.getInt());
 
-        //STR测试
-        getjson.setkey("test","test-STR");
-        System.out.println(getjson.getSTR("test"));
-
-        //获得LIST SET ZSET
-        System.out.println(getjson.getLIST("LIST",10));
-        System.out.println(getjson.getSET("SET"));
-        System.out.println(getjson.getZSET("ZSET",10));
 
         System.out.println("\n\n\n\n");
         int i=0;
